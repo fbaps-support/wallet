@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 
-use WebApp;
 use lib "/var/www/apps/wallet/lib";
+use WebApp;
 use Wallet;
 use HTML::Entities;
 use strict;
