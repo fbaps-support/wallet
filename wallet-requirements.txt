@@ -1,0 +1,33 @@
+OK change a password
+OK TRANSACTIONS
+OK user administrator flag
+OK "emergency user" flag - use of this user account to retrieve a password immediately marks it as insecure.
+OK datestamp passwords
+OK expiry policy on create (weeks)
+OK categories (tags)
+OK delete a password
+OK "see who owns this password"
+OK personal password complexity check - 8 chars mixed lets/non-lets and 
+OK at least 4 different chars.
+OK forgotten password - any user administrator can re-blank the public/private
+   for a user. This allows user to set a new password on login. The reset also
+   nulls out the encrypted entries in the passwords table for that user. 
+   A password owner, when they log in, can then regenerate the encryption for
+   the user.
+NO personal password expiry - 1 year (constant in code) - NO. Not a lot of point.
+
+
+"redundancy" count in password list?
+"not assigned to an emergency user" flag?
+"grant this password to the same list of people as have that password"
+"alert conditions" table 
+	- tag, type, message
+	- insecure
+	- past expiry
+	- someone needs re-encryption
+	...
+
+	change password deletes where tag='...' and type in ('insecure',
+	'expired')..
+
+

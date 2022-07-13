@@ -1,0 +1,121 @@
+* {
+	font-family: arial, helvetica, verdana;
+	font-size: 11pt;
+}
+
+body {
+	background-color: white;
+	color: black;
+}
+
+a:link    { color: #0000ff; text-decoration: none; }
+a:visited { color: #0000ff; text-decoration: none; }
+a:active  { color: #ff0000; text-decoration: none; }
+a:hover   { color: #ff0000; text-decoration: none; }
+
+.formtable {
+	border-width: 0px;
+}
+.formtable td {
+	border-width: 0px;
+	vertical-align: top;
+}
+.formtable th {
+	border-width: 0px;
+	vertical-align: top;
+}
+
+.realtable td {
+        border-style: solid solid solid solid;
+        border-color: black;
+        border-width: 1px 1px 1px 1px;
+	border-spacing: 0px;
+	border-collapse: collapse;
+	vertical-align: top;
+}
+.realtable th {
+        border-style: solid solid solid solid;
+        border-color: black;
+        border-width: 1px 1px 1px 1px;
+	border-spacing: 0px;
+	border-collapse: collapse;
+	vertical-align: top;
+}
+.realtable {
+        border-style: solid solid solid solid;
+        border-color: black;
+        border-width: 1px 1px 1px 1px;
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+
+table td {
+        border-style: solid solid solid solid;
+        border-color: black;
+        border-width: 0px;
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+table {
+        border-style: solid solid solid solid;
+        border-color: black;
+        border-width: 0px;
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+
+.tabbar {
+	vertical-align: top;
+	width: 100%;
+        padding: 0px 0px 3em 0px;
+}
+.warning {
+	vertical-align: top;
+	color: #ff0000;
+	font-weight: bold;
+}
+.error {
+	vertical-align: top;
+	color: #ff0000;
+	font-weight: bold;
+}
+.info {
+	vertical-align: top;
+	color: #ff8000;
+	font-weight: bold;
+}
+.tab {
+        border-style: solid solid solid solid;
+        border-color: black;
+        border-width: 1px 1px 1px 1px;
+	border-radius: 5px 5px 0px 0px;
+        background-color: #cccccc;
+        color: #000000;
+        padding: 2px 0.5em 2px 0.5em;
+        margin-top: 4px;
+        margin-right: 0px;
+        font-size: 10pt;
+        font-weight: normal;
+        text-align: center;
+        float: left;
+}
+.tab-selected {
+        border-style: solid solid solid solid;
+        border-color: black;
+        border-width: 1px 1px 0px 1px;
+	border-radius: 5px 5px 0px 0px;
+        background-color: #ffffff;
+	color: #000000;
+        padding: 2px 0.5em 2px 0.5em;
+        margin-top: 4px;
+        margin-right: 0px;
+        font-size: 10pt;
+        color: #000000;
+        text-align: center;
+        float: left;
+}
+
+td { font-size: 11pt }
+th { font-size: 11pt }
+
+form { padding: 0; margin: 0; display: inline; }

@@ -1,0 +1,97 @@
+<html>
+<head>
+<title>Password wallet help</title>
+<link rel="stylesheet" href="wallet.css">
+</head>
+<body>
+
+<a name="intro"><h1>Introduction</h1></a>
+
+<p>
+This system provides a secure method for storing credentials and granting
+appropriate people access to them. Credentials are encrypted using <a
+href="http://en.wikipedia.org/wiki/RSA">public key cryptography</a> combined
+with <a href="http://en.wikipedia.org/wiki/Advanced_Encryption_Standard">AES</a>
+and stored in a database. The system is designed to prevent anyone from gaining
+access to credentials that haven't been explicitely granted to them, <i>even if
+they have complete access to the stored data</i>. For more information about the
+storage of credentials, see the <a href="#technical_details">technical details</a> 
+section.
+
+<p>
+Each stored credential has one or more nominated owners, an optional expiry
+period and a description stored. These can be accessed by validated users of the
+system. Access, modification or granting of any stored credential itself
+requires the entry of the user's wallet password each time. No sensitive
+information is therefore cached, either on the server or on the client, that
+could be used to gain unauthorised access to a credential, even in the case
+where a user has left themselves logged into the system.
+
+<p>
+Stored credentials are free-text and any sensitive information (e.g. URLs,
+security responses) can be stored, not just username/password pairs. Each
+credential is stored with metadata to help users to manage and find information
+within the system. This includes a description, suggested expiry time and a
+flexible tagging system.
+
+<p>
+While the stored credentials are free text, a certain amount of parsing is done. 
+In particular:
+
+<ul>
+<li>If a line is of the form
+<pre>
+Heading: value
+</pre>
+then it will be preceded with a "Copy" button, which will place <tt>value</tt>
+onto the clipboard.
+</li>
+<li>If a line is of the form
+<pre>
+Heading TOTP: value
+</pre>
+then the value is assumed to be an RFC 6238 time based one-time password key. 
+An extra line will be added, immediately following it, with the current OTP 
+code derived from that key.
+</ul>
+
+<a name="flags"><h1>Flags</h1></a>
+<p>
+The "Flags" column of the View Credentials screen can contain the following 
+values:
+<table class="realtable">
+
+<tr><td>O</td><td>
+You are an owner of this credential
+</td></tr>
+
+<tr><td>M</td><td>
+You should have access to this credential but (probably because of a
+password reset) your decryption key for it is missing. This will be 
+fixed automatically the next time someone with access to this credential 
+accesses it.
+</td></tr>
+
+<tr><td>N</td><td>
+This credential has no expiry duration specified.
+</td></tr>
+
+<tr><td>E</td><td>
+This credential has an expiry duration specified and that duration has now 
+passed since the credential was changed.
+</td></tr>
+
+<tr><td>I</td><td>
+This credential has been marked as insecure, either because a user who had 
+access to it has been deleted from the system or because an "emergency" user
+has accessed it.
+</td></tr>
+
+</table>
+
+<a name="technical_details"><h1>Technical details</h1></a>
+
+TODO
+
+</body>
+</html>
